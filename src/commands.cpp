@@ -1,6 +1,8 @@
+#include <ctype.h>
+#include "../include/commands.h"
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
+
 
 char* getUserInput () {
   char input[20];
@@ -13,10 +15,4 @@ char* getUserInput () {
   } else {
     return (char*)"No command entered.";
   }
-}
-
-int main () {
-  printf("Do you want to play?\n");
-  printf("%s\n", getUserInput());
-  return 0;
 }
