@@ -2,10 +2,10 @@
 using namespace std;
 class player
 private:
-  int id(int a)
-  void username(string b)
+  void id(int a);
+  void username(string b);
 
-  void password(string p)
+  void password(string p);
 
-  void inventory(string i[c])
+  void inventory(string i[c]);
 
