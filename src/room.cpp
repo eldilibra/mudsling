@@ -1,7 +1,7 @@
-#inlcude "room.h"
+#include "room.h"
 using namespace std;
 
-void room :: id_of_room(int i[c])
+void room :: id(int i[c])
 
 void room :: item(string a[b])
 
