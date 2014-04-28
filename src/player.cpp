@@ -1,5 +1,4 @@
 #include "player.h"
-#include <iostream>
 using namespace std;
 
 void player :: id(int a)
