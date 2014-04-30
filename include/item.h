@@ -1,4 +1,4 @@
-using namesapce std;
+using namespace std;
 class item
 private:
   void name(string n);
