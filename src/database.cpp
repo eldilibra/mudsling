@@ -1,14 +1,13 @@
-#include "../include/commands.h"
+#include <libpq-fe.h>
 #include "stdio.h"
 #include "stdlib.h"
-#include "libpq-fe.h"
 
 static void exit_nicely(PGconn *conn) {
   PQfinish(conn);
   exit(1);
 }
 
-int main () {
+PGconn* init_db() {
   const char *conninfo;
   PGconn     *conn;
   PGresult   *res;
@@ -22,7 +21,11 @@ int main () {
     PQerrorMessage(conn));
     exit_nicely(conn);
   }
+  return conn;
+}
 
+void derp() {
+  /*
   res = PQexec(conn, "SELECT * FROM player");
   if ((!res) || (PQresultStatus(res) != PGRES_TUPLES_OK))
   {
@@ -43,4 +46,5 @@ int main () {
   printf("Do you want to play?\n");
   printf("%s\n", getUserInput());
   return 0;
+  */
 }
