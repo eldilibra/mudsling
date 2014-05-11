@@ -1,12 +1,12 @@
 #include "player.h"
-using namespace std;
 
-void player :: id(int a)
+Player::Player() {
+}
 
-void player :: username(string b)
+void Player::id(int a)
 
-void player :: password(string p)
+void Player::username(string b)
 
-void player :: inventory(string i[c])
+void Player::password(string p)
 
-
+void Player::inventory(string i[c])
