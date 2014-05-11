@@ -1,6 +1,9 @@
 using namespace std;
 class item
 private:
-  void name(string n);
+  void getname(string n){
+  }
 
-  void description(string string d);
+  void getdescription(string string d){
+    
+  }
