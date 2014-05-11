@@ -1,6 +1,6 @@
 #include "item.h"
 using namespace std;
+pbulic:
+void item :: setname(string n);
 
-void item :: name(string n)
-
-void item :: description(string string d)
+void item :: setdescription(string string d);
