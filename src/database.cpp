@@ -10,9 +10,6 @@ static void exit_nicely(PGconn *conn) {
 PGconn* init_db() {
   const char *conninfo;
   PGconn     *conn;
-  PGresult   *res;
-  int         nFields;
-  int         i, num_records;
 
   conninfo = "dbname = mudsling";
   conn = PQconnectdb(conninfo);
@@ -24,8 +21,10 @@ PGconn* init_db() {
   return conn;
 }
 
-void derp() {
-  /*
+ player_by_id(PGconn* conn, int id) {
+  PGresult *res;
+  int      nFields, num_records, i;
+
   res = PQexec(conn, "SELECT * FROM player");
   if ((!res) || (PQresultStatus(res) != PGRES_TUPLES_OK))
   {
@@ -43,8 +42,5 @@ void derp() {
   PQclear(res);
   PQfinish(conn);
 
-  printf("Do you want to play?\n");
-  printf("%s\n", getUserInput());
   return 0;
-  */
 }
