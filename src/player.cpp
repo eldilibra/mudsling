@@ -1,12 +1,10 @@
 #include "player.h"
 using namespace std;
 
-void player :: id(int a)
-
-void player :: username(string b)
-
-void player :: password(string p)
-
-void player :: inventory(string i[c])
+public:
+  void  id(int a);
+  void username(string b);
+  void password(string p);
+  void inventory(string i[c]);
 
 
