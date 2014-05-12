@@ -1,6 +1,12 @@
+#ifndef ITEM_H
+#define ITEM_H
 using namespace std;
 class item
 private:
+  string n,d;
+  item() {
+  }
+public:
   void getname(string n){
   }
 
