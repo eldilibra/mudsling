@@ -1,5 +1,5 @@
 #include <libpq-fe.h>
-#include "player.h"
+#include "Player.h"
 #include "stdio.h"
 #include "stdlib.h"
 
@@ -31,7 +31,8 @@ Player player_by_id(PGconn* conn, int id) {
           1,
           NULL,
           NULL,
-          );
+          NULL,
+          0);
   if ((!res) || (PQresultStatus(res) != PGRES_TUPLES_OK)) {
     fprintf(stderr, "SELECT command did not return tuples properly\n");
     PQclear(res);

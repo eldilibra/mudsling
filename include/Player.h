@@ -1,26 +1,33 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include <iostream>
-using namespace std;
-class Player
+
+#include "Item.h"
+
+class Player {
 private:
-  int a;
-  string b,p,i,c;
-  Player()
-  {
-  }
+  int id;
+  char* username;
+  char* password;
+  Item* inventory;
+  Player() {}
+
 public:
-getid(int a){
-  
-  }
-getusername(string b){
-    
-  }
+  Player(int id, char* username, char* password);
 
-getpassword(string p){
-    
-  }
-getinventory(string i[c]){
-    
-  }
+  int getId() { return id; }
 
+  char* getUsername() { return username; }
+
+  char* getPassword() { return password; }
+
+  Item* getInventory() { return inventory; }
+
+  void setId(int id);
+
+  void setUsername(char* username);
+
+  void setPassword(char* password);
+
+  void setInventory(Item* items);
+};
+#endif

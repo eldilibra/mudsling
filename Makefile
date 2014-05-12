@@ -8,7 +8,7 @@ SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 CFLAGS := -g # -Wall
 LIB := -L/usr/local/Cellar/postgresql/9.2.4/lib -lpq #-pthread -lmongoclient -L lib -lboost_thread-mt -lboost_filesystem-mt -lboost_system-mt
-INC := -I /usr/local/Cellar/postgresql/9.2.4/include
+INC := -I /usr/local/Cellar/postgresql/9.2.4/include -I include
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."

@@ -1,15 +1,21 @@
 #ifndef ITEM_H
 #define ITEM_H
-using namespace std;
-class Item
-private:
-  string n,d;
-  item() {
-  }
-public:
-  void getname(string n){
-  }
 
-  void getdescription(string string d){
-    
-  }
+class Item {
+private:
+  char* name;
+  char* description;
+  Item() {}
+
+public:
+  Item(char* name, char* description);
+
+  char* getName() { return name; }
+
+  char* getDescription() { return description; }
+
+  void setName(char* newName);
+
+  void setDescription(char* newDescription);
+};
+#endif

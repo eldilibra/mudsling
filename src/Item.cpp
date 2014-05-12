@@ -1,10 +1,14 @@
 #include "Item.h"
-using namespace std;
-public:
-void Item :: setname(string n)
 
-void Item :: setdescription(string string d)
-private
-void Item :: name(string n)
+Item::Item(char* newName, char* newDescription) {
+  name = newName;
+  description = newDescription;
+}
 
-void Item :: description(string string d)
+void Item::setName(char* newName) {
+  name = newName;
+}
+
+void Item::setDescription(char* newDescription) {
+  description = newDescription;
+}

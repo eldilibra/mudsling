@@ -1,20 +1,24 @@
 #include "Player.h"
+#include "Item.h"
 
-Player::Player() {
+Player::Player(int newId, char* newUsername, char* newPassword) {
+  id = newId;
+  username = newUsername;
+  password = newPassword;
 }
-public:
-void Player::setid(int a)
 
-void Player::setusername(string b)
+void Player::setId(int newId) {
+  id = newId;
+}
 
-void Player::setpassword(string p)
+void Player::setUsername(char* newUsername) {
+  username = newUsername;
+}
 
-void Player::setinventory(string i[c])
-private:
-void Player::id(int a)
+void Player::setPassword(char* newPassword) {
+  password = newPassword;
+}
 
-void Player::username(string b)
-
-void Player::password(string p)
-
-void Player::inventory(string i[c])
+void Player::setInventory(Item* items) {
+  inventory = items;
+}
