@@ -1,8 +1,13 @@
+#ifndef ROOM_H
+#define ROOM_H
 using namespace std;
 class room
 private:
   int d, i, c, e;
   string a,b;
+  room()
+  {
+  }
 public:
 void getid(int i[c]){
   }
