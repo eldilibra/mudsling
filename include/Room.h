@@ -5,7 +5,7 @@ class room
 private:
   int d, i, c, e;
   string a,b;
-  room()
+  Room()
   {
   }
 public:
