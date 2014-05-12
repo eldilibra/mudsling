@@ -1,7 +1,7 @@
 #ifndef ITEM_H
 #define ITEM_H
 using namespace std;
-class item
+class Item
 private:
   string n,d;
   item() {
