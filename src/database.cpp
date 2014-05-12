@@ -1,4 +1,5 @@
 #include <libpq-fe.h>
+#include "player.h"
 #include "stdio.h"
 #include "stdlib.h"
 
@@ -21,13 +22,17 @@ PGconn* init_db() {
   return conn;
 }
 
- player_by_id(PGconn* conn, int id) {
+Player player_by_id(PGconn* conn, int id) {
   PGresult *res;
   int      nFields, num_records, i;
 
-  res = PQexec(conn, "SELECT * FROM player");
-  if ((!res) || (PQresultStatus(res) != PGRES_TUPLES_OK))
-  {
+  res = PQexecParams(conn,
+          "SELECT * FROM player where id = $1",
+          1,
+          NULL,
+          NULL,
+          );
+  if ((!res) || (PQresultStatus(res) != PGRES_TUPLES_OK)) {
     fprintf(stderr, "SELECT command did not return tuples properly\n");
     PQclear(res);
     exit_nicely(conn);
@@ -42,5 +47,5 @@ PGconn* init_db() {
   PQclear(res);
   PQfinish(conn);
 
-  return 0;
+  return ;
 }
