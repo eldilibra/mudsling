@@ -1,17 +1,21 @@
 #include <iostream>
 using namespace std;
 class player
+private:
+  int a;
+  string b,p,i,c;
 public:
-  getid(int a){
+getid(int a){
+  
   }
-  getusername(string b){
+getusername(string b){
     
   }
 
-  getpassword(string p){
+getpassword(string p){
     
   }
-  getinventory(string i[c]){
+getinventory(string i[c]){
     
   }
 
