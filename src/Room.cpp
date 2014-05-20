@@ -1,23 +1,22 @@
 #include "Room.h"
+#include "Player.h"
+#include "Item.h"
 using namespace std;
-public:
-void Room :: setid(int i[c])
-
-void Room :: setitem(string a[b])
-
-void Room :: setcurrent_players(int d[e])
-void setnorth_Room(NULL)
-void seteast_Room(NULL)
-void setsouth_Room(NULL)
-void setwest_Room(NULL)
-private:
-void Room :: setid(int i[c])
-
-void Room :: item(string a[b])
-
-void Room :: current_players(int d[e])
-
-void north_Room(NULL)
-void east_Room(NULL)
-void south_Room(NULL)
-void west_Room(NULL)
+Room :: Room(char* players, id, item);
+{
+  players = new_players;
+  id = new_id;
+  item = new_item;
+}  
+void Room :: set_players(char* players)
+{
+  players = new_players;
+}
+void Room :: set_id(char* id)
+{
+  Player = new_id;
+}
+void Room :: set_item(char* item)
+{
+  item = new_item;
+}
