@@ -1,4 +1,4 @@
-CC := gcc
+CC := g++
 SRCDIR := src
 BUILDDIR := obj
 TARGET := bin/mudsling
@@ -7,7 +7,7 @@ SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 CFLAGS := -g # -Wall
-LIB := -L/usr/local/Cellar/postgresql/9.2.4/lib -lpq #-pthread -lmongoclient -L lib -lboost_thread-mt -lboost_filesystem-mt -lboost_system-mt
+LIB := -L/usr/local/Cellar/postgresql/9.2.4/lib -lpq -pthread -L/opt/X11/lib -lX11#-lmongoclient -L lib -lboost_thread-mt -lboost_filesystem-mt -lboost_system-mt
 INC := -I /usr/local/Cellar/postgresql/9.2.4/include -I include
 
 $(TARGET): $(OBJECTS)
